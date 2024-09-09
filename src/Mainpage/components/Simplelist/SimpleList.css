@@ -1,0 +1,137 @@
+/* SimpleList.css */
+
+/* Container for the list of cards */
+.simple-list__container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of items */
+    gap: 1.5rem;
+    padding: 1rem;
+    justify-content: center;
+}
+
+/* Individual card styling */
+.simple-list__card {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer; /* Indicate that the card is clickable */
+    max-width: 600px;
+    flex: 1 1 calc(50% - 1.5rem); /* Flex basis for two cards per row */
+}
+
+/* Image styling within the card */
+.simple-list__card-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-right: 1px solid #eee;
+}
+
+/* Content section within the card */
+.simple-list__card-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Make sure the content takes up the remaining space */
+}
+
+/* Title styling */
+.simple-list__card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Tag styling */
+.simple-list__card-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.simple-list__card-tag {
+    padding: 0.3rem 0.6rem;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Document list styling */
+.simple-list__card-docs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.simple-list__card-doc {
+    padding: 0.3rem 0.6rem;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Description styling */
+.simple-list__card-description {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Pricing styling */
+.simple-list__card-pricing {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjust gap between items */
+    margin: 8px 0; /* Margin around the whole container */
+}
+
+.simple-list1__card-pricing {
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 12px; /* Rounded corners */
+    /*padding: 8px 12px;*/ /* Padding inside the badge */
+    display: flex;
+    align-items: center; /* Center items vertically */
+    gap: 2px; /* Space between caste and price */
+    border: 1px solid #ddd; /* Border color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+    .simple-list1__card-pricing:hover {
+        background-color: #f0f4f8; /* Slightly darker background color on hover */
+        transform: scale(1.02); /* Slightly scale up on hover */
+    }
+
+    .simple-list1__card-pricing .caste {
+        font-size: 1.2rem; /* Adjust font size for caste */
+        font-weight: 500; /* Semi-bold font weight */
+        color: #007bff; /* Color for caste */
+        background-color: #eaf4ff; /* Background color for caste */
+        padding: 4px 8px; /* Padding inside caste badge */
+        border-radius: 8px; /* Rounded corners for caste badge */
+    }
+
+    .simple-list1__card-pricing .price {
+        font-size: 1.1rem; /* Adjust font size for price */
+        font-weight: 600; /* Bold font weight */
+        color: #ff5722; /* Color for price */
+        background-color: #fff3e0; /* Background color for price */
+        padding: 4px 8px; /* Padding inside price badge */
+        border-radius: 8px; /* Rounded corners for price badge */
+    }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .simple-list__card {
+        flex: 1 1 100%; /* Full width for small screens */
+    }
+}
+
+@media (min-width: 769px) {
+    .simple-list__card {
+        flex: 1 1 calc(50% - 1.5rem); /* Two cards per row with gap adjustment */
+    }
+}

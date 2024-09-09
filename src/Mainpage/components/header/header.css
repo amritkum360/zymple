@@ -1,0 +1,49 @@
+/* src/Header.css */
+
+.custom-navbar {
+    padding: 0.5rem 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3EB9A0 !important;
+    font-family: cursive !important;
+}
+
+.search-form {
+    max-width: 500px;
+}
+
+    .search-form .form-control {
+        border-radius: 0;
+    }
+
+    .search-form .btn-outline-success {
+        border-radius: 0;
+    }
+
+.nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1rem;
+    font-weight: 500;
+    color: #007bff;
+    text-align: center;
+}
+
+    .nav-link:hover {
+        color: #0056b3;
+    }
+
+.nav-icon {
+    font-size: 1.2rem; /* Adjust size of the icons */
+    margin-bottom: 0.5rem; /* Space between icon and text */
+}
+
+.menuItem{
+    font-size:1.1rem
+}
+

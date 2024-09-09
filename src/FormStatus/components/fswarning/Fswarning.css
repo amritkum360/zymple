@@ -1,0 +1,36 @@
+.fswarning {
+    display: flex;
+    align-items: center;
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 10px;
+    border: 1px solid #ffeeba;
+    border-radius: 5px;
+    justify-content: space-between;
+  }
+  
+  .phone-icon {
+    background-image: url('path-to-your-phone-icon.svg'); /* Or use a font icon */
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .phone-number {
+    margin-left: 10px;
+  }
+  
+  .whatsapp-button {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .whatsapp-button:hover {
+    background-color: #1EBE53;
+  }
+  

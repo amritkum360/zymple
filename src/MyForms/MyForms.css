@@ -1,0 +1,75 @@
+/* MyForms.css */
+.myforms-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .myforms-card {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer; /* Add cursor style to indicate clickable */
+  }
+  
+  .myforms-card-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-right: 1px solid #eee;
+  }
+  
+  .myforms-card-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .myforms-card-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .myforms-card-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .myforms-card-tag {
+    padding: 0.3rem 0.6rem;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1.2rem;
+  }
+  
+  .myforms-card-description {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .myforms-card-pricing {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #2e8b57;
+  }
+  
+  .myforms-card-docs {
+    margin-bottom: 1rem;
+  }
+  
+  .myforms-card-doc {
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+  }
+  
