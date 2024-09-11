@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import './FormStatus.css';
 import { getUserIdFromToken } from '../utils/auth';
 import Fswarning from './components/fswarning/fswarning';
+import { backendip } from '../utils/const';
 
 const FormStatus = () => {
     const { id: formId } = useParams(); // Get the form ID from URL params
@@ -22,7 +23,7 @@ const FormStatus = () => {
 
     useEffect(() => {
         // Fetch form status from backend
-        fetch(`http://localhost:3003/api/status/formstatus/${formId}/${userId}`)
+        fetch(backendip + `/api/status/formstatus/${formId}/${userId}`)
             .then(response => response.text())
             .then(text => {
                 let data;

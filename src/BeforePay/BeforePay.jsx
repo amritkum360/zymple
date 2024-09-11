@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './BeforePay.css';
-import {backendip} from '../utils/const'
+import {backendip, razorpayip} from '../utils/const'
 
 const BeforePay = () => {
   const { id } = useParams();
@@ -16,12 +16,12 @@ const BeforePay = () => {
   useEffect(() => {
     const fetchFormData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3003/api/forms/forms/${id}`);
+        const response = await axios.get(backendip + `/api/forms/forms/${id}`);
         setFormData(response.data);
 
         const userId = getUserIdFromToken();
         if (userId) {
-            const paymentResponse = await axios.get(`http://localhost:3003/api/status/formstatus/${id}/${userId}`);
+            const paymentResponse = await axios.get(backendip + `/api/status/formstatus/${id}/${userId}`);
             console.log(paymentResponse)
 
             if (paymentResponse.data.status === "Payment Done") {
@@ -87,7 +87,7 @@ const BeforePay = () => {
 
     try {
       // Create an order on the backend
-      const orderResponse = await axios.post(backendip + ':4000/order', {
+      const orderResponse = await axios.post(razorpayip + '/order', {
         amount: paidAmount * 100, // Amount in paise
         currency: 'INR',
         receipt: `receipt_${formId}_${userId}`,
@@ -111,16 +111,16 @@ const BeforePay = () => {
           };
 
           try {
-            await axios.post(backendip + ':4000/order/validate', paymentData);
+            await axios.post(razorpayip + '/order/validate', paymentData);
             // On successful payment validation, save the payment details
-            await axios.post(backendip + ':3003/api/paidamount', {
+            await axios.post(backendip + '/api/paidamount', {
               formId,
               user: userId,
               caste: selectedCaste,
               paidAmount,
             });
 
-              await axios.post(backendip + ':3003/api/status/formstatus', {
+              await axios.post(backendip + '/api/status/formstatus', {
               formId,
                userId,
                 status: "Payment Done",

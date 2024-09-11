@@ -28,7 +28,7 @@ export default function Login() {
     const handleOtpSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(backendip + ':3003/api/auth/login', {
+            const response = await fetch(backendip + '/api/auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../BeforePay.css';
+import { backendip, razorpayip } from '../../utils/const';
 
 const Repay = () => {
     const { id } = useParams(); // Get form ID from URL
@@ -15,7 +16,7 @@ const Repay = () => {
     useEffect(() => {
         const fetchFormData = async () => {
             try {
-                const response = await axios.get(`http://localhost:3003/api/forms/forms/${id}`); // Fetch form data from backend
+                const response = await axios.get(backendip + `/api/forms/forms/${id}`); // Fetch form data from backend
                 setFormData(response.data);
             } catch (error) {
                 console.error('Error fetching form data', error);
@@ -74,7 +75,7 @@ const Repay = () => {
 
         try {
             // Create an order on the backend
-            const orderResponse = await axios.post('http://localhost:4000/order', {
+            const orderResponse = await axios.post(razorpayip + '/order', {
                 amount: paidAmount * 100, // Amount in paise
                 currency: 'INR',
                 receipt: `receipt_${formId}_${userId}`,
@@ -98,9 +99,9 @@ const Repay = () => {
                     };
 
                     try {
-                        await axios.post('http://localhost:4000/order/validate', paymentData);
+                        await axios.post(razorpayip + '/order/validate', paymentData);
 
-                        await axios.post('http://localhost:3003/api/paidamount', {
+                        await axios.post(backendip + '/api/paidamount', {
                             formId,
                             user: userId,
                             caste: selectedCaste,

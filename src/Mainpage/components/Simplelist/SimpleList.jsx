@@ -15,7 +15,7 @@ export default function SimpleList() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(backendip + ':3003/api/forms/printforms');
+                const response = await fetch(backendip + '/api/forms/printforms');
                 const result = await response.json();
                 const formattedData = result.map(item => ({
                     id: item._id,
@@ -51,7 +51,7 @@ export default function SimpleList() {
         try {
             // Attempt to fetch the document status
             try {
-                const docsResponse = await axios.get(backendip + ':3003/api/status/formstatus/${formData.id}/${userId}');
+                const docsResponse = await axios.get(backendip + '/api/status/formstatus/${formData.id}/${userId}');
                 const status = docsResponse.data.status;
                 console.log("Document status:", status);
 

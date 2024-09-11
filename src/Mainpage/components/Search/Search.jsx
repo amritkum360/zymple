@@ -18,7 +18,7 @@ export default function Search() {
       }
       setLoading(true);
       try {
-        const response = await axios.get(backendip + ':3003/search', {
+        const response = await axios.get(backendip + '/search', {
           params: { query }
         });
         setResults(response.data);

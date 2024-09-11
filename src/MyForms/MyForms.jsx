@@ -19,7 +19,7 @@ export default function MyForms() {
       const userid = getUserIdFromToken(); 
       
       try {
-        const response = await fetch(backendip + ':3003/myorders', {
+        const response = await fetch(backendip + '/myorders', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ export default function MyForms() {
 
             try {
                 // Fetch the payment status
-                const paymentResponse = await axios.get(`http://localhost:3003/api/paidamount?formId=${formData.id}&user=${userId}`);
+                const paymentResponse = await axios.get(backendip + `/api/paidamount?formId=${formData.id}&user=${userId}`);
                 isPaymentDone = paymentResponse.data.length > 0;
                 console.log("Payment Response:", paymentResponse.data);
             } catch (error) {
@@ -81,7 +81,7 @@ export default function MyForms() {
             }
 
             // Fetch the uploaded documents
-            const uploadedDocsResponse = await axios.get(`http://localhost:3003/api/docs/uploadedDocs/${formData.id}/${userId}`);
+            const uploadedDocsResponse = await axios.get(backendip + `/api/docs/uploadedDocs/${formData.id}/${userId}`);
             setUploadedDocs(uploadedDocsResponse.data);
             console.log("Uploaded Docs Response:", uploadedDocsResponse.data);
 

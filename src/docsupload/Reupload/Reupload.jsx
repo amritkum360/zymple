@@ -18,7 +18,7 @@ const Reupload = () => {
   const [uploadProgress, setUploadProgress] = useState({});
 
   useEffect(() => {
-    axios.get(`http://localhost:3003/api/docs/docsrequired/${id}`)
+    axios.get(backendip + `/api/docs/docsrequired/${id}`)
       .then(response => {
         setRequiredDocs(response.data);
       })
@@ -27,7 +27,7 @@ const Reupload = () => {
 
   useEffect(() => {
     if (userId) {
-      axios.get(`http://localhost:3003/api/docs/uploadedDocs/${id}/${userId}`)
+      axios.get(backendip + `/api/docs/uploadedDocs/${id}/${userId}`)
         .then(response => {
           setUploadedDocs(response.data);
           
@@ -56,7 +56,7 @@ const Reupload = () => {
     formData.append('userId', userId);
 
     try {
-      const response = await axios.post(backendip + ':3003/upload', formData, {
+      const response = await axios.post(backendip + '/upload', formData, {
         onUploadProgress: progressEvent => {
           const percentCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total);
           setUploadProgress(prevState => ({
@@ -102,8 +102,8 @@ const Reupload = () => {
 
   const handleRemove = async (doc) => {
     try {
-      await axios.delete(`http://localhost:3003/uploadedDocs/${id}/${userId}/${doc}`);
-      const updatedDocs = await axios.get(`http://localhost:3003/uploadedDocs/${id}/${userId}`);
+      await axios.delete(backendip + `/uploadedDocs/${id}/${userId}/${doc}`);
+      const updatedDocs = await axios.get(backendip + `/uploadedDocs/${id}/${userId}`);
       setUploadedDocs(updatedDocs.data);
     } catch (error) {
       console.error(`Error removing document ${doc}:`, error);
@@ -115,7 +115,7 @@ const Reupload = () => {
 
     if (allUploaded) {
       try {
-        await axios.post(backendip + ':3003/api/status/formstatus', {
+        await axios.post(backendip + '/api/status/formstatus', {
           formId: id,
           userId,
           status: 'Document Uploaded'

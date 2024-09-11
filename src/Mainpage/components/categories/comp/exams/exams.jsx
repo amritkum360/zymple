@@ -30,7 +30,7 @@ export default function Exams() {
     const handleExamClick = async (examId) => {
         try {
             // Fetch exam status
-            const statusResponse = await axios.get(`http://localhost:3003/api/status/formstatus/${examId}/${userId}`);
+            const statusResponse = await axios.get(backendip + `/api/status/formstatus/${examId}/${userId}`);
             const status = statusResponse.data.status;
 
             // Navigate based on status
