@@ -15,7 +15,7 @@ export default function Exams() {
     useEffect(() => {
         const fetchExams = async () => {
             try {
-                const response = await axios.get(backendip +':3003/cat/exams');
+                const response = await axios.get(backendip + '/cat/exams');
                 setExams(response.data);
             } catch (error) {
                 console.error('Error fetching exams', error);
