@@ -4,7 +4,7 @@ import './RefundPolicy.css'; // Optional for custom styling
 
 const RefundPolicy = () => {
   return (
-    <Container className="refund-policy-section mt-5">
+    <Container className="refund-policy-section mt-2">
       <Row className="justify-content-center">
         <Col lg={10}>
           <h1 className="refund-policy-title">Refund Policy</h1>
