@@ -12,6 +12,12 @@ import Repay from './BeforePay/Repayment/Repayment';
 import Reupload from './docsupload/Reupload/Reupload';
 import MyForms from './MyForms/MyForms';
 import Profile from './Profile/Profile'
+import AboutUs from './pages/AboutUs';
+import CancellationPolicy from './pages/Cancelation';
+import ContactUs from './pages/contactus';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import RefundPolicy from './pages/RefundPolicy';
+import TermsAndConditions from './pages/Termsandconditions';
 
 function ProtectedRoute({ element }) {
   console.log(element)
@@ -70,7 +76,32 @@ function App() {
     {
       path: "/myforms",
       element: <><Header /><MyForms /></>
-    }
+    },
+    {
+      path: "/about",
+      element: <><Header /><AboutUs /></>
+    },
+    {
+      path: "/cancelation",
+      element: <><Header /><CancellationPolicy /></>
+    },
+    {
+      path: "/contact",
+      element: <><Header /><ContactUs /></>
+    },
+    {
+      path: "/privacy",
+      element: <><Header /><PrivacyPolicy /></>
+    },
+    {
+      path: "/refund",
+      element: <><Header /><RefundPolicy /></>
+    },
+    {
+      path: "/terms",
+      element: <><Header /><TermsAndConditions /></>
+    },
+
   ]);
 
   return (
