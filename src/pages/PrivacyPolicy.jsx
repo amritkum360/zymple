@@ -4,7 +4,7 @@ import './PrivacyPolicy.css'; // Optional for custom styling
 
 const PrivacyPolicy = () => {
   return (
-    <Container className="privacy-policy-section mt-5">
+    <Container className="privacy-policy-section mt-2">
       <Row className="justify-content-center">
         <Col lg={10}>
           <h1 className="privacy-policy-title">Privacy Policy</h1>
