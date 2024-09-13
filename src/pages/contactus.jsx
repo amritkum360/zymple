@@ -13,8 +13,8 @@ const ContactUs = () => {
           <h2>Company Information</h2>
           <ul className="contact-info">
             <li><strong>Company Name:</strong> Amrit Kumar</li>
-            <li><strong>Address:</strong> 1234 Main Street, Suite 100, City, State, ZIP Code</li>
-            <li><strong>Mobile Number:</strong> +91 98765 43210</li>
+            <li><strong>Address:</strong> Mairwa, Siwan , Bihar -841239</li>
+            <li><strong>Mobile Number:</strong> +91 7667267787</li>
             <li><strong>Email:</strong> <a href="mailto:amritkum360@gmail.com">amritkum360@gmail.com</a></li>
           </ul>
 
