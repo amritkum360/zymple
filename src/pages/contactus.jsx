@@ -4,7 +4,7 @@ import './ContactUs.css'; // Optional for custom styling
 
 const ContactUs = () => {
   return (
-    <Container className="contact-us-section mt-5">
+    <Container className="contact-us-section mt-2">
       <Row className="justify-content-center">
         <Col lg={8}>
           <h1 className="contact-us-title">Contact Us</h1>
