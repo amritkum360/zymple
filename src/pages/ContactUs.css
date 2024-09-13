@@ -1,0 +1,46 @@
+.contact-us-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .contact-us-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff5722;
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-top: 30px;
+  }
+  
+  p, li {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .contact-info li {
+    margin-bottom: 10px;
+    list-style-type: none;
+  }
+  
+  a {
+    color: #ff5722;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  button {
+    background-color: #ff5722;
+    border: none;
+  }
+  
+  button:hover {
+    background-color: #ff7842;
+  }
+  

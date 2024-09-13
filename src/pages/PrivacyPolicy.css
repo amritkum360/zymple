@@ -1,0 +1,32 @@
+.privacy-policy-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .privacy-policy-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff5722;
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-top: 30px;
+  }
+  
+  p, li {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  a {
+    color: #ff5722;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
