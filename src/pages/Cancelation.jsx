@@ -4,7 +4,7 @@ import './CancellationPolicy.css'; // Optional for custom styling
 
 const CancellationPolicy = () => {
   return (
-    <Container className="cancellation-policy-section mt-5">
+    <Container className="cancellation-policy-section mt-2">
       <Row className="justify-content-center">
         <Col lg={10}>
           <h1 className="cancellation-policy-title">Cancellation Policy</h1>
