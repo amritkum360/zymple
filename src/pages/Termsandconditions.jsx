@@ -4,7 +4,7 @@ import './TermsAndConditions.css'; // Optional for custom styling
 
 const TermsAndConditions = () => {
   return (
-    <Container className="terms-and-conditions-section mt-5">
+    <Container className="terms-and-conditions-section mt-2">
       <Row className="justify-content-center">
         <Col lg={10}>
           <h1 className="terms-title">Terms and Conditions</h1>
