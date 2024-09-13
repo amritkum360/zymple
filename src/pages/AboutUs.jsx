@@ -4,7 +4,7 @@ import './AboutUs.css'; // Custom CSS for styling
 
 const AboutUs = () => {
   return (
-    <Container className="about-us-section mt-5">
+    <Container className="about-us-section mt-2">
       <Row className="justify-content-center text-center">
         <Col lg={8}>
           <h1 className="about-us-title">About Zymple</h1>
