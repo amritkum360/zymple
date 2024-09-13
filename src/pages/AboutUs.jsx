@@ -16,7 +16,7 @@ const AboutUs = () => {
 
       <Row className="mt-5 text-center">
         <Col md={4}>
-          <Image src="team1.jpg" roundedCircle className="team-image" />
+          <Image src="https://www.awpem.com/assets/img/about/mission-awpem.png" roundedCircle className="team-image" />
           <h3>Our Mission</h3>
           <p>
             To eliminate the need to visit physical centers for form submissions by bringing the service to your fingertips.
@@ -24,7 +24,7 @@ const AboutUs = () => {
         </Col>
 
         <Col md={4}>
-          <Image src="team2.jpg" roundedCircle className="team-image" />
+          <Image src="https://i0.wp.com/mymeadowreport.com/wp-content/uploads/2020/01/img_1111.jpg?fit=1000%2C750&ssl=1" roundedCircle className="team-image" />
           <h3>Our Vision</h3>
           <p>
             To become the leading digital platform for form submissions, serving millions of users across the country.
@@ -32,7 +32,7 @@ const AboutUs = () => {
         </Col>
 
         <Col md={4}>
-          <Image src="team3.jpg" roundedCircle className="team-image" />
+          <Image src="https://cdn.vectorstock.com/i/500p/72/04/why-choose-us-sign-on-white-background-vector-51497204.jpg" roundedCircle className="team-image" />
           <h3>Why Choose Us?</h3>
           <p>
             Fast, reliable, and easy-to-use services that take the hassle out of form filling, payments, and document uploads.
