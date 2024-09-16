@@ -102,28 +102,7 @@ export default function Login() {
     const [error, setError] = useState('');
     const navigate = useNavigate();
 
-    useEffect(() => {
-    // Function to dynamically inject the OTPless script into the document
-    const addOtplessScript = () => {
-      const script = document.createElement('script');
-      script.id = 'otpless-sdk';
-      script.type = 'text/javascript';
-      script.src = 'https://otpless.com/v2/auth.js';
-      script.setAttribute('data-appid', '0M80UY23JKRY0EY12RXP');
-      document.body.appendChild(script);
-    };
 
-    // Inject the script on component mount
-    addOtplessScript();
-
-    // Clean up: remove the script when the component unmounts
-    return () => {
-      const script = document.getElementById('otpless-sdk');
-      if (script) {
-        document.body.removeChild(script);
-      }
-    };
-  }, []);
 
     useEffect(() => {
         // OTPless callback
