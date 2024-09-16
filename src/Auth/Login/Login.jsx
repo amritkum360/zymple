@@ -136,7 +136,7 @@ export default function Login() {
 
     return (
         <div className="login-container">
-              <h1>Amrit</h1>
+{/*               <h1>Amrit</h1> */}
             {/* <h3 className="login-title">Login with OTPless</h3> */}
             {error && <p className="error-message">{error}</p>}
        
