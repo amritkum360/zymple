@@ -131,6 +131,15 @@ export default function Login() {
         };
     }, [setToken, navigate]);
 
+    const phoneAuth = () => {
+  OTPlessSignin.initiate({
+    channel: "PHONE",
+    phone: "7667267787",
+    countryCode: "+91",
+  });
+};
+
+
     return (
         <div className="login-container">
               <h1>Amrit</h1>
