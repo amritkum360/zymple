@@ -4,13 +4,6 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-           <!-- OTPLESS SDK -->
-<script
-id="otpless-sdk"
-src="https://otpless.com/v2/headless.js"
-data-appid="0M80UY23JKRY0EY12RXP">
-
-</script>
 
     <title>Vite + React</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -18,31 +11,7 @@ data-appid="0M80UY23JKRY0EY12RXP">
   <body style="margin:0;">
 
     <div id="root"></div>
-      <script>
-  const callback = (userinfo) => {
-    const emailMap = otplessUser.identities.find(
-      (item) => item.identityType === "EMAIL"
-    );
-
-    const mobileMap = otplessUser.identities.find(
-      (item) => item.identityType === "MOBILE"
-    )?.identityValue;
-
-    const token = otplessUser.token;
-
-    const email = emailMap?.identityValue;
-
-    const mobile = mobileMap?.identityValue;
-
-    const name = emailMap?.name || mobileMap?.name;
-
-    console.log(userinfo);
-
-    // Implement your custom logic here.
-  };
-  // Initialize OTPLESS SDK with the defined callback.
-  const OTPlessSignin = new OTPless(callback);
-</script>
+     
 
     <script type="module" src="/src/main.jsx"></script>
       
