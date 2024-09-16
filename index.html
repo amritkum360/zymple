@@ -18,6 +18,32 @@ data-appid="0M80UY23JKRY0EY12RXP">
   <body style="margin:0;">
 
     <div id="root"></div>
+      <script>
+  const callback = (userinfo) => {
+    const emailMap = otplessUser.identities.find(
+      (item) => item.identityType === "EMAIL"
+    );
+
+    const mobileMap = otplessUser.identities.find(
+      (item) => item.identityType === "MOBILE"
+    )?.identityValue;
+
+    const token = otplessUser.token;
+
+    const email = emailMap?.identityValue;
+
+    const mobile = mobileMap?.identityValue;
+
+    const name = emailMap?.name || mobileMap?.name;
+
+    console.log(userinfo);
+
+    // Implement your custom logic here.
+  };
+  // Initialize OTPLESS SDK with the defined callback.
+  const OTPlessSignin = new OTPless(callback);
+</script>
+
     <script type="module" src="/src/main.jsx"></script>
       
   </body>
