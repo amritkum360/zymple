@@ -138,6 +138,20 @@ export default function Login() {
             {error && <p className="error-message">{error}</p>}
        
             <div id="otpless-login-page"></div>
+
+            <div>
+  <input id="mobile-input" placeholder="Enter mobile number" />
+  <button onclick="phoneAuth()">Request OTP</button>
+</div>
+
+<div id="otp-section" style="display: none;">
+  <input id="otp-input" placeholder="Enter OTP" />
+  <button onclick="verifyOTP()">Verify OTP</button>
+</div>
+
+<button onclick="oauth('WHATSAPP')">Continue with WhatsApp</button>
+<button onclick="oauth('GMAIL')">Continue with Gmail</button>
+
         </div>
     );
 }
