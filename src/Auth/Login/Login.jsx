@@ -135,7 +135,7 @@ export default function Login() {
         <div className="login-container">
             {/* <h3 className="login-title">Login with OTPless</h3> */}
             {error && <p className="error-message">{error}</p>}
-         
+         <h1>Amrit</h1>
             <div id="otpless-login-page"></div>
         </div>
     );
