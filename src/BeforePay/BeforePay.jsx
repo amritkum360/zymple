@@ -90,7 +90,7 @@ const BeforePay = () => {
       const orderResponse = await axios.post(razorpayip + '/order', {
         amount: paidAmount * 100, // Amount in paise
         currency: 'INR',
-        receipt: `receipt_${formId}_${userId}`,
+receipt: `receipt_${formId.substring(0, 10)}_${userId.substring(0, 10)}`, 
       });
 
       const order = orderResponse.data;
