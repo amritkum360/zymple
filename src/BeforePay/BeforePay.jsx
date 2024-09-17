@@ -96,7 +96,7 @@ const BeforePay = () => {
       const order = orderResponse.data;
 
       const options = {
-        key: 'rzp_live_S303TmF0hfQw4N', // Replace with your Razorpay key ID
+        key: 'rzp_test_2NeEZJpOj1mDAk', // Replace with your Razorpay key ID
         amount: order.amount,
         currency: order.currency,
         name: formData.formname,
