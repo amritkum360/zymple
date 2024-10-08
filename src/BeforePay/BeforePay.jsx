@@ -10,7 +10,7 @@ let cashfree; // Initialize Cashfree variable
 // Initialize Cashfree SDK
 const initializeSDK = async () => {
   cashfree = await load({
-    mode: 'sandbox' // Use 'production' for live transactions
+    mode: 'production' // Use 'production' for live transactions
   });
 };
 
